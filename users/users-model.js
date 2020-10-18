@@ -13,8 +13,7 @@ function find() {
     return db('users').select(
 		'id',
 		'username',
-		'password',
-		'phoneNumber'
+		'password'
 	);
 };
 
