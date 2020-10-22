@@ -18,7 +18,10 @@ server.use( '/api/plants', restricted, plantsRouter );
 server.use( '/api/users', usersRouter );
 
 server.get( '/', (req, res) => {
-    res.json({ api: 'up' });
+    res.json({ 
+        api: 'up',
+        environment: process.env.DB_ENV
+    });
 });
 
 module.exports = server;
